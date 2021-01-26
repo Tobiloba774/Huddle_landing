@@ -1,0 +1,85 @@
+.about {
+  margin: 5rem 0;
+  font-family: Poppins, sans-serif;
+  .flex {
+    padding: 1rem;
+    @include breakpoint-down(small) {
+      flex-direction: column-reverse;
+    }
+    &.reverse {
+      flex-direction: row-reverse;
+      @include breakpoint-down(small) {
+        flex-direction: column-reverse;
+      }
+      &-text {
+        width: 31.0625rem;
+        padding-right: 3rem;
+      }
+    }
+    img {
+      width: 27rem;
+      padding: 2rem;
+      @include breakpoint-down(small) {
+        width: 90%;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+  &-text {
+    width: 31.0625rem;
+    padding-left: 3rem;
+    h2 {
+      font-size: 21px;
+      font-weight: bold;
+    }
+    p {
+      font-weight: 300;
+    }
+    @include breakpoint-down(small) {
+      width: 80%;
+      padding-left: 0;
+    }
+  }
+}
+
+.build {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 4rem 0;
+  position: relative;
+  top: 150px;
+  h3 {
+    font-size: 18px;
+  }
+  @include breakpoint-down(small) {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  a.text-btn {
+    background: $Pink;
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    @include breakpoint-down(small) {
+      padding: 11px 60px;
+      margin-bottom: 2rem;
+      a.text-btn:focus,
+      a.text-btn:hover,
+      a.text-btn:active {
+        opacity: 0.7;
+      }
+    }
+  }
+  .cta {
+    background: #fff;
+    padding: 18px 64px;
+    border-radius: 50px;
+    font-weight: map-get($font-weights, font-lw);
+    box-shadow: 0 0 5px 1px #eee;
+    @include breakpoint-down(small) {
+      padding: 7px 20px;
+    }
+  }
+}

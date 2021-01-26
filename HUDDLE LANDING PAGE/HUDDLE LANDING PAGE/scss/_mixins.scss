@@ -1,0 +1,21 @@
+@media (min-width: 64em) {
+  //styles go here
+}
+
+/*# sourceMappingURL=desktop.css.map */
+$breakpoints-down: (
+  "small": "40.5em",
+);
+$breakpoints-up: (
+  "large": "90em",
+);
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

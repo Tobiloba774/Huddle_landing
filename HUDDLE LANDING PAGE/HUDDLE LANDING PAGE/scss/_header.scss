@@ -1,0 +1,73 @@
+header {
+  background: url(../images/bg-hero-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $Very-Pale-Cyan;
+  font-family: map-get($font-families, Poppin);
+  overflow: hidden;
+  @include breakpoint-down(small) {
+    background-image: url(../images/bg-hero-mobile.svg);
+    text-align: center;
+  }
+  .flex:first-child {
+    padding: 3.75rem 0;
+    @include breakpoint-down(small) {
+      padding: 1.5rem 0 5rem;
+    }
+  }
+
+  .cta {
+    background: #fff;
+    padding: 17px 64px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    box-shadow: 0 0 5px 1px #eee;
+    @include breakpoint-down(small) {
+      padding: 7px 20px;
+    }
+  }
+  .cta:focus,
+  .cta:hover,
+  .cta:active {
+    box-shadow: 0 0 10px 2.5px #eee;
+  }
+  img#mockup {
+    width: 40rem;
+    padding-bottom: 2rem;
+    @include breakpoint-down(small) {
+      width: 100%;
+    }
+    @include breakpoint-up(large) {
+      width: 42.5rem;
+    }
+  }
+  .flex.showcase {
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+  }
+  .flex__text {
+    padding-right: 1em;
+    *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    a.text-btn {
+      background: $Pink;
+      color: #fff;
+      margin-top: 1rem;
+      display: inline-block;
+      cursor: pointer;
+      @include breakpoint-down(small) {
+        padding: 11px 60px;
+        margin-bottom: 2rem;
+        a.text-btn:focus,
+        a.text-btn:hover,
+        a.text-btn:active {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
